@@ -1,0 +1,1222 @@
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url("./font/Montserrat/static/Montserrat-Medium.ttf")
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url("./font/Montserrat/static/Montserrat-Light.ttf")
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url("./font/Montserrat/static/Montserrat-Bold.ttf")
+}
+
+@font-face {
+    font-family: 'Poiret_One-Regular';
+    src: url("./font/Poiret_One/PoiretOne-Regular.ttf")
+}
+
+html {
+    height: 100%;
+}
+
+a,article,audio,b,body,del,details,div,em,fieldset,figcaption,figure,footer,form,header,html,i,iframe,img,input,label,legend,li,menu,nav,ol,p,pre,section,small,span,strong,sub,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    font-style: normal
+}
+
+b,strong {
+    font-family: 'Montserrat-Bold';
+}
+
+button {
+    border: none;
+    margin: 0;
+    text-decoration: none;
+}
+
+.main-container {
+    max-width: 1280px;
+    margin: auto;
+    width: calc(100% - 64px);
+}
+
+h1 {
+    display: block;
+    font: normal 40px/60px Poiret_One-Regular;
+    margin: 0 auto 40px;
+    width: fit-content;
+    color: #1F2041
+    
+}
+
+h2 {
+    display: block;
+    font: normal 32px/48px Poiret_One-Regular;
+    margin: 0 0 24px;
+    color: #1F2041
+}
+
+h3 {
+    display: block;
+    font: normal 24px/36px Poiret_One-Regular;
+    margin: 0
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding-bottom: 240px;
+    font-family: Montserrat-Regular, Arial;
+    color: #FFF;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+button:focus-visible, input:focus-visible, input[type="radio"]:focus-visible + label, input[type="checkbox"]:focus-visible + label:before, span[role="button"]:focus-visible, [tabindex="0"]:focus-visible, textarea:focus-visible, summary:focus-visible, a:focus-visible {
+    outline: 2px solid #181818;
+    outline-offset: 2px;
+}
+
+:root {
+    --clr-sfr: #A60E20;
+    --clr-sfr2: #D90D25;
+    --clr-black: #131316;
+    --clr-bg: #F4F4F5;
+    --clr-disable: #D1D1D6;
+    --clr-grey: #70707B;
+    --clr-green: #067647;
+    --clr-yellow: #fac515;
+    --clr-error: #DE3024;
+}
+
+a[class^="btn"],input[class^="btn"],button[class^="btn"] {
+    display: block;
+    position: relative;
+    font-family: SFR-Bold;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: background-color .3s ease-out ;
+}
+
+a[class^="btn"]:hover,input[class^="btn"]:hover,button[class^="btn"]:hover {
+    background-color: var(--clr-sfr);
+}
+
+.btn {
+    color: #fff;
+    background-color: var(--clr-sfr2);
+}
+
+a.btn:hover,input.btn:hover,button.btn:hover {
+    background-color: var(--clr-sfr);
+}
+
+a.btn2:hover,input.btn2:hover,button.btn2:hover {
+    background-color: #3F3F46;
+}
+
+a.btn3:hover,input.btn3:hover,button.btn3:hover {
+    background-color: var(--clr-black);
+    color: #fff;
+}
+
+a.btn4:hover,input.btn4:hover,button.btn4:hover {
+    color: #3F3F46;
+    border: solid 1px #3F3F46;
+    background: unset;
+}
+
+.btn2 {
+    color: #fff;
+    background: var(--clr-black);
+}
+
+.btn3 {
+    color: var(--clr-black);
+    background: #fff;
+}
+
+.btn4 {
+    color: var(--clr-black);
+    border: solid 1px var(--clr-black);
+}
+
+.btn5 {
+    color: #fff;
+    background: var(--clr-black);
+    border: solid 1px #fff;
+}
+
+.btn:disabled,.btn2:disabled,.btn3:disabled {
+    color: #A0A0AB;
+    background-color: var(--clr-bg);
+    pointer-events: none;
+}
+
+.btn4:disabled,.btn5:disabled {
+    color: var(--clr-grey);
+    border-color: var(--clr-grey)
+}
+
+.btn[disabled],.btn2[disabled],.btn3[disabled] {
+    color: var(--clr-grey);
+    background-color: var(--clr-disable);
+    pointer-events: none;
+}
+
+.btn4[disabled],.btn5[disabled] {
+    color: var(--clr-grey);
+    border-color: var(--clr-grey)
+}
+
+a[class^="btn"].loader,input[class^="btn"].loader {
+    background: var(--clr-disable);
+    border: var(--clr-disable);
+    cursor: default
+}
+
+a[class^="btn"].loader:before,input[class^="btn"].loader:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-disable);
+    left: 0;
+    top: 0
+}
+
+.loader:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 16px;
+    width: 16px;
+    color: var(--clr-sfr2);
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate 1s linear infinite
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+button[class^="link"],a[class^="link"] {
+    position: relative;
+    font: normal 14px/18px SFR-Bold;
+    padding: 0 13px 0 0;
+    cursor: pointer
+}
+
+button[class^="link"]:after,a[class^="link"]:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 2px;
+    border: 2px solid;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transition: all .2s cubic-bezier(.4,0,.2,1)
+}
+
+button[class^="link"]:hover:after,a[class^="link"]:hover:after {
+    right: -3px
+}
+
+button[class^="link"] {
+    border: 0;
+    background: transparent;
+    cursor: pointer
+}
+
+.link {
+    color: var(--clr-sfr2);
+    text-decoration: none
+}
+
+.link2 {
+    color: var(--clr-black);
+    text-decoration: none
+}
+
+.link3 {
+    color: #fff;
+    text-decoration: none
+}
+
+.link.u {
+    font-family: SFR-Bold;
+    color: var(--clr-black);
+    text-decoration: underline;
+    padding: 0
+}
+
+.link.u:after {
+    content: none
+}
+
+.price {
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+    font: normal 24px/48px SFR-Bold;
+    text-align: left;
+}
+
+.price .L {
+    margin: 0;
+}
+
+.price .R:last-of-type {
+    font: normal 14px / 14px SFR-Bold;
+}
+
+.price .o {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'SFR-Regular';
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: line-through;
+    margin-left: 4px;
+}
+
+.price > .o {
+    width: 100%;
+    margin: 0;
+}
+
+.message {
+    position: relative;
+    display: grid;
+    padding: 24px 24px 24px 72px;
+    gap: 16px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'SFR-Regular';
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.message.ko {
+    background: #FFF0F0;
+}
+
+.message:before {
+    position: absolute;
+    content: "";
+    top: 24px;
+    left: 24px;
+    margin: auto;
+    width: 32px;
+    height: 32px;
+}
+
+.message.ko:before {
+    background: url(//static.s-sfr.fr/assets/pictos/croix_cercle_40_rouge.svg) center/contain;
+}
+
+.message.ko:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--clr-sfr2);
+}
+
+.message.ok {
+    background: #E8F8F0;
+}
+
+.message.ok:before {
+    background: url(//static.s-sfr.fr/assets/pictos/check_circle_40_blanc.svg) center/contain;
+    filter: invert(57%) sepia(94%) saturate(905%) hue-rotate(120deg) brightness(88%) contrast(98%);
+}
+
+.message.ok:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--clr-green);
+}
+
+.message.wa {
+    background: #FFF4E0;
+}
+
+.message.wa:before {
+    background: url(//static.s-sfr.fr/assets/pictos/alerte_40_blanc.svg) center/contain;
+    filter: invert(60%) sepia(30%) saturate(5083%) hue-rotate(3deg) brightness(106%) contrast(103%);
+}
+
+.message.wa:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #FF9300;
+}
+
+.message.i {
+    background: #ECF2FF;
+}
+
+.message.i:before {
+    background: url(//static.s-sfr.fr/assets/pictos/information_40_blanc.svg) center/contain;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(17%) saturate(5248%) hue-rotate(215deg) brightness(96%) contrast(98%);
+}
+
+.message.i:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #6172F3;
+}
+
+.message.tr {
+    background: transparent;
+    border: 1px solid #70707B;
+}
+
+.message.tr:before {
+    background: url(https://static.s-sfr.fr/assets/pictos/hors_jeu_40_rouge.svg) center/contain;
+}
+
+.message.tr:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #70707B;
+}
+
+.message ul {
+    list-style: none;
+    font-size: 14px;
+    margin: 0 0 0 16px;
+}
+
+.message li {
+    margin: 0 0 8px 0;
+}
+
+.message li:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    margin: 7px 0 0 -16px
+}
+
+.message.i li:before {
+    background: #6172F3
+}
+
+.message.wa li:before {
+    background: #FF9300
+}
+
+.message.ko li:before {
+    background: var(--clr-sfr2)
+}
+
+.message.ok li:before {
+    background: var(--clr-green)
+}
+
+details.faq > summary {
+    list-style-type: none;
+    font: 16px/24px SFR-Bold;
+    padding: 0 24px 0 0;
+    cursor: pointer
+}
+
+details.faq > summary::-webkit-details-marker {
+    display: none
+}
+
+details.faq {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 0 0 24px 0;
+    padding: 24px;
+    border-radius: 8px
+}
+
+details.faq:last-child {
+    margin: 0
+}
+
+details.faq summary:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--clr-black);
+    transform: rotate(45deg);
+    top: 29px;
+    right: 26px;
+    border-top: 0;
+    border-left: 0;
+    transition: all 0.2s ease-out
+}
+
+details.faq[open] summary:after {
+    transform: rotate(225deg)
+}
+
+details.faq>div {
+    margin: 24px 0 0 0
+}
+
+details.faq> p:not(:last-child) {
+    margin: 0 0 16px 0
+}
+
+details.faq>div a {
+    text-decoration: underline
+}
+
+.hid {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: 0 -1px -1px 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute
+}
+
+#FilAriane {
+    width: 1280px;
+    max-width: calc(100% - 32px);
+    margin: 16px auto 24px;
+    text-align: left
+}
+
+#FilAriane ol {
+    list-style: none
+}
+
+#FilAriane li {
+    display: inline-block;
+    position: relative;
+    margin: 0 24px 0 0;
+    font: 12px/normal 'SFR-Regular';
+}
+
+#FilAriane li:not([aria-current="page"]):after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url(https://static.s-sfr.fr/assets/pictos/chevron_droite_40_noir.svg);
+    background-size: cover;
+    position: absolute;
+    top: 2px;
+    right: -22px;
+}
+
+#FilAriane a {
+    text-decoration: underline;
+    color: var(--clr-black)
+}
+
+#FilAriane li[aria-current="page"] {
+    font-family: 'SFR-Bold'
+}
+
+#REA {
+    background: #fff;
+    box-shadow: 0px 8px 16px rgba(24, 24, 24, 0.02);
+    padding: 24px 0;
+    margin: 40px auto 0 auto;
+    font: normal 16px/24px "SFR-Bold";
+    color: var(--clr-black);
+}
+
+#REA>p {
+    width: 1280px;
+    max-width: calc(100% - 64px);
+    margin: 0 auto;
+    font: 24px/36px "SFR-Bold"
+}
+
+#REA ul {
+    max-width: 1280px;
+    margin: 16px auto 0;
+    width: calc(100% - 64px);
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+}
+
+#REA img {
+    height: 40px;
+    margin: 0 0 16px;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid var(--clr-disable);
+    margin: 0
+}
+
+[id^="SEO"] {
+    color: var(--clr-black);
+    background: #fff;
+    list-style: inside
+}
+
+[id^="SEO"] details {
+    position: relative;
+    padding: 24px 0;
+    width: calc(100% - 64px);
+    max-width: 1280px;
+    margin: 0 auto
+}
+
+[id^="SEO"] details strong {
+    font-family: 'SFR-Bold'
+}
+
+[id^="SEO"] details a {
+    color: var(--clr-black);
+    cursor: pointer
+}
+
+[id^="SEO"] summary {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+[id^="SEO"] summary::-webkit-details-marker {
+    display: none
+}
+
+[id^="SEO"] summary>span {
+    font: 16px/normal 'SFR-Bold';
+    display: block;
+    padding: 0 16px 0 0
+}
+
+[id^="SEO"] summary>span+p {
+    margin: 24px 0 0 0
+}
+
+[id^="SEO"] summary>span+p:empty {
+    display: none;
+}
+
+[id^="SEO"] summary>span+i {
+    margin: 24px 0 0 0;
+    display: block;
+    font-size: 14px
+}
+
+[id^="SEO"] summary>p {
+    font: 14px/normal 'SFR-Regular'
+}
+
+[id^="SEO"] summary>p>a {
+    font: 14px/normal 'SFR-Bold'
+}
+
+[id^="SEO"] summary+div {
+    font: 14px/normal 'SFR-Regular';
+    margin: 24px 0 0 0
+}
+
+[id^="SEO"] a {
+    color: var(--clr-black);
+    text-decoration: underline
+}
+
+[id^="SEO"] details summary:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--clr-black);
+    transform: rotate(45deg);
+    top: 29px;
+    right: 0;
+    border-top: 0;
+    border-left: 0;
+    transition: all 0.2s ease-out
+}
+
+[id^="SEO"] details[open] summary:after {
+    transform: rotate(225deg)
+}
+
+.CP {
+    width: 290px;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 8;
+    position: relative;
+    border-radius: 8px;
+    background: #fff;
+    padding: 24px 16px;
+    overflow: hidden;
+    gap: 0;
+    transition: opacity .4s ease-out;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.CP:hover .img-central {
+    transform: scale(1.1);
+}
+
+.CP .stickers {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.CP .sticker {
+    line-height: 24px;
+    font-family: 'SFR-Bold';
+    font-size: 12px;
+    background: var(--clr-yellow);
+    color: var(--clr-black);
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+.CP .sticker.j {
+    background: var(--clr-yellow);
+    color: var(--clr-black);
+}
+
+.CP .sticker.b {
+    background: var(--clr-green);
+    color: #fff;
+}
+
+.CP .sticker.n {
+    background: var(--clr-black);
+    color: #fff;
+}
+
+.CP .T {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.CP .T .img-central {
+    transition: 0.5s ease-out transform;
+    width: 184px;
+    object-fit: contain;
+    max-height: 100%;
+    height: auto;
+}
+
+.CP .T .img-r {
+    width: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.CP .marque {
+    font: normal 14px/22px SFR-Regular;
+    text-transform: uppercase;
+}
+
+.CP .M a {
+    font: normal 24px/36px SFR-Bold;
+    color: var(--clr-black);
+    text-decoration: none;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.CP .M a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.CP .from-price {
+    text-transform: lowercase;
+    font-size: 14px;
+}
+
+.CP .from-price + .B {
+    margin: -16px 0 0 0;
+    white-space: normal
+}
+
+.CP .B {
+    position: relative;
+    line-height: normal;
+}
+
+.CP .B .desc-p {
+    font-family: SFR-Bold;
+    color: var(--clr-sfr2);
+    margin: 0 0 4px;
+}
+
+.CP .colors {
+    display: flex;
+    flex-direction: column;
+    width: 12px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.CP .colors span {
+    position: relative;
+    cursor: pointer;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0px 1px 2px 0px #00000033 inset;
+    width: 12px;
+    font-size: 5px;
+    height: 12px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    margin: 4px 0;
+}
+
+.CP .colors .d:before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 1.5px;
+    background: var(--clr-black);
+    transform: rotate(130deg);
+    left: -1px;
+    bottom: 0;
+    top: 0px;
+    margin: auto;
+}
+
+.CP .from-price + .price {
+    margin: -16px 0 0 0;
+}
+
+.CP .price {
+    justify-content: flex-start;
+}
+
+.CP .param {
+    display: flex;
+    gap: 0 4px;
+}
+
+.CP .param .option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: unset;
+    color: var(--clr-black);
+    height: auto;
+    text-align: center;
+    padding: 16px;
+    font: normal 12px/18px SFR-Regular;
+    margin: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--clr-grey);
+    cursor: pointer;
+}
+
+.CP .param .option.a,.param input:checked + .option {
+    padding: 15px;
+    border: var(--clr-sfr2) 2px solid;
+    box-shadow: 0 3px 9px transparent;
+    cursor: default;
+    font-family: SFR-Bold
+}
+
+.CP .param .option.d {
+    background: #E9E9E9;
+    color: var(--clr-grey);
+    text-decoration: line-through;
+    border: 2px solid var(--clr-grey);
+    padding: 15px;
+    cursor: default;
+}
+
+.CP .param input:disabled + .option {
+    background: #E9E9E9;
+    color: var(--clr-grey);
+    border: 2px solid var(--clr-grey);
+    padding: 15px;
+    cursor: default;
+}
+
+.CP .star {
+    font-family: SFR-Bold;
+    color: var(--clr-sfr2);
+}
+
+.AVIS {
+    position: relative;
+    margin: 0;
+}
+
+.AVIS>a {
+    font-size: 12px;
+    font-family: 'SFR-Regular';
+    color: var(--clr-black);
+    display: inline-block;
+    text-decoration: underline;
+    z-index: 5;
+    position: absolute;
+    top: 2px;
+    margin: 0 0 0 5px;
+}
+
+.AVIS span {
+    font-size: 12px;
+    font-family: 'SFR-Bold';
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4px 0 0;
+}
+
+.AVIS .stars {
+    width: 88px;
+    height: 18px;
+    background: url(//static.s-sfr.fr/media/pictos/stars_vide.svg) no-repeat left top;
+}
+
+.AVIS mark {
+    height: 18px;
+    background: url(//static.s-sfr.fr/media/pictos/stars_pleine.svg) no-repeat left top;
+    background-size: 88px 18px;
+    display: block;
+}
+
+.AVIS>img {
+    height: 16px;
+    width: 16px;
+    filter: invert(84%) sepia(19%) saturate(5971%) hue-rotate(0deg) brightness(105%) contrast(103%);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.AVIS>img.emp {
+    height: 18px;
+    width: 18px;
+    margin: 0 0 0 -1px;
+}
+
+.availability {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    height: 18px;
+    font-family: SFR-Regular;
+    margin-left: 14px;
+}
+
+.availability:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: -14px;
+    border-radius: 100%
+}
+
+.availability.wa:before {
+    background-color: #ff9300
+}
+
+.availability.ok:before {
+    background-color: var(--clr-green)
+}
+
+.availability.ko:before {
+    background-color: var(--clr-error)
+}
+
+.availability.in:before {
+    background-color: var(--clr-black)
+}
+
+.POPIN {
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(24, 24, 24, .08);
+    max-height: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    width: 880px;
+    overflow-y: auto;
+    padding: 40px 20px 25px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    bottom: 0;
+    border: 0;
+    gap: 16px;
+}
+
+.POPIN::backdrop {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.POPIN>button {
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 32px;
+    background: none;
+}
+
+.POPIN>button:before {
+    content: "";
+    position: absolute;
+    background: url(https://static.s-sfr.fr/assets/pictos/fermer_40_noir.svg);
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+    left: 0;
+    top: 0
+}
+
+.transcription {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 0 0 24px 0;
+    padding: 24px 24px 24px 0;
+    border-radius: 8px
+}
+
+.transcription > summary {
+    list-style-type: none;
+    font: 16px/24px SFR-Bold;
+    cursor: pointer
+}
+
+.transcription > summary::-webkit-details-marker {
+    display: none
+}
+
+.transcription summary:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--clr-black);
+    transform: rotate(45deg);
+    top: 29px;
+    right: 4px;
+    border-top: 0;
+    border-left: 0;
+    transition: all 0.2s ease-out
+}
+
+.transcription[open] summary:after {
+    transform: rotate(225deg)
+}
+
+.transcription>div {
+    margin: 24px 0 0 0
+}
+
+.transcription> p:not(:last-child) {
+    margin: 0 0 16px 0
+}
+
+.transcription>div a {
+    text-decoration: underline
+}
+
+.radio:before {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 8px #fff;
+    border: 2px solid var(--clr-green);
+    margin: 0 8px 0 0;
+}
+
+input:checked + .radio:before {
+    background: var(--clr-green);
+    box-shadow: inset 0 0 0 2.5px #fff;
+    border: 1px solid var(--clr-green);
+}
+
+@media(max-width: 1100px) {
+    h1 {
+        font-size:32px;
+        line-height: 48px
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 36px
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    a[class^="link"] {
+        font-size: 12px;
+        line-height: 16px
+    }
+
+    a[class^="link"]:after {
+        top: unset;
+        bottom: 2px;
+    }
+
+    details.faq {
+        margin: 0 0 16px 0;
+        padding: 16px;
+    }
+
+    details.faq>div {
+        margin: 16px 0 0 0;
+    }
+
+    details.faq summary:after {
+        top: 21px;
+    }
+
+    #REA {
+        padding: 16px 0;
+        margin: 24px 0 0 0;
+    }
+
+    #REA > p {
+        max-width: calc(100% - 32px);
+        font: 16px/24px "SFR-Bold"
+    }
+
+    #REA ul {
+        width: calc(100% - 32px);
+        flex-flow: column;
+        justify-content: start;
+        gap: 16px;
+        text-align: left;
+    }
+
+    #REA img,#REA ul p {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 16px 0 0;
+    }
+
+    #REA ul p {
+        font: normal 14px/21px "SFR-Bold";
+    }
+
+    [id^="SEO"] details {
+        width: calc(100% - 32px);
+    }
+
+    .transcription {
+        margin: 0 0 16px 0;
+    }
+
+    .transcription>div {
+        margin: 16px 0 0 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .message {
+        padding:64px 16px 16px
+    }
+
+    .message:before {
+        left: 16px;
+        top: 16px
+    }
+}
